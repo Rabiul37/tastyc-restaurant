@@ -103,7 +103,7 @@ const Navber = () => {
         </div>
         <div className="navbar-end">
           <h1>{user?.email}</h1>
-          <Link to="/signin">
+          <Link to="/Login">
             <button
               onClick={handleLogout}
               className="border-2 border-gray-100  px-6 py-1 text-gray-100 font-opensens text-xl font-semibold hover:bg-[#e8be6a] hover:text-white hover:border-none rounded-md "

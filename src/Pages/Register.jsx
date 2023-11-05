@@ -3,6 +3,7 @@ import Navber from "../Components/Navber";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import "../AllCss/Login.css";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/Ai";
 const Register = () => {
   const { register } = useContext(AuthContext);
@@ -40,14 +41,14 @@ const Register = () => {
       });
   };
   return (
-    <div>
+    <div className="regcontainer font-philosopher">
       <Navber></Navber>
-      <div className="min-h-screen bg-gray-800">
+      <div className="min-h-screen ">
         <div className="hero-content flex-col ">
           <div className="text-center ">
             <h1 className="text-5xl font-bold text-gray-200">Register now!</h1>
           </div>
-          <div className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
+          <div className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-[#000000b9]">
             <div className="text-center m-3">
               {registerError && (
                 <span className="text-lg font-semibold text-red-600">
@@ -58,51 +59,51 @@ const Register = () => {
             <form onSubmit={handleRegisterForm} className="p-5">
               <div className="lg:flex items-center gap-5">
                 <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">User Name</span>
+                  <label className="label text-gray-100">
+                    <span>User Name</span>
                   </label>
                   <input
                     type="text"
                     name="name"
                     placeholder="Your Name"
-                    className="input input-bordered"
+                    className="input input-bordered bg-gray-100"
                     required
                   />
                 </div>
                 <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">User image</span>
+                  <label className="label text-gray-100">
+                    <span className="">User image</span>
                   </label>
                   <input
                     type="text"
                     name="imgURL"
                     placeholder="Your image Link"
-                    className="input input-bordered"
+                    className="input input-bordered bg-gray-100"
                     required
                   />
                 </div>
               </div>
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
+                <label className="label text-gray-100">
+                  <span className="">Email</span>
                 </label>
                 <input
                   type="email"
                   name="email"
                   placeholder="email"
-                  className="input input-bordered"
+                  className="input input-bordered bg-gray-100"
                   required
                 />
               </div>
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Password</span>
+                <label className="label text-gray-100">
+                  <span className="">Password</span>
                 </label>
                 <input
                   type={showPassword ? "text" : "password"}
                   name="password"
                   placeholder="password"
-                  className="input input-bordered relative"
+                  className="input input-bordered relative "
                   required
                 />
                 <span
@@ -118,16 +119,16 @@ const Register = () => {
               </div>
               <label>
                 <input type="checkbox" name="checkbox" id="" />
-                <span className="text-sm font-semibold ml-2">
+                <span className="text-sm font-semibold ml-2 text-gray-100">
                   Agree with our term and condition
                 </span>
               </label>
               <div className="form-control mt-6">
-                <button className="btn text-gray-200 bg-gray-700">
+                <button className="btn text-black bg-gray-100 text-xl tracking-wider">
                   Register
                 </button>
               </div>
-              <h1 className="texxt-sm font-semibold">
+              <h1 className="texxt-sm font-semibold text-gray-100">
                 Do not have account ?{" "}
                 <Link to="/Login" className="underline">
                   Login

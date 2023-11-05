@@ -1,0 +1,14 @@
+.logcontainer {
+  background-image: linear-gradient(#151515, #00000033),
+    url("../assets/images/burger.webp");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+.regcontainer {
+  background-image: linear-gradient(#151515, #00000033),
+    url("../assets/images/pitja.png");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
