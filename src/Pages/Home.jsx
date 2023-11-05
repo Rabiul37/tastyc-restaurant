@@ -1,10 +1,11 @@
 import Banner from "../Components/Banner";
-import Navber from "../Components/Navber";
+import Team from "../Components/Team";
 
 const Home = () => {
   return (
     <div>
       <Banner></Banner>
+      <Team></Team>
     </div>
   );
 };
