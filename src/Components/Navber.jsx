@@ -87,12 +87,14 @@ const Navber = () => {
               {navber}
             </ul>
           </div>
-          <div>
-            <h1 className="text-3xl font-semibold text-gray-100 font-philosopher">
-              Tastyc
-            </h1>
-            <img src={design2} className="w-20" alt="" />
-          </div>
+          <Link to="/">
+            <div>
+              <h1 className="text-3xl font-semibold text-gray-100 font-philosopher">
+                Tastyc
+              </h1>
+              <img src={design2} className="w-20" alt="" />
+            </div>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="flex gap-5 text-white font-philosopher text-2xl   menu-horizontal px-1">
