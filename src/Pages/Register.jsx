@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 import "../AllCss/Login.css";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/Ai";
 const Register = () => {
-  const { register } = useContext(AuthContext);
+  const { register, updataUser } = useContext(AuthContext);
   const [registerError, setRegisterError] = useState(" ");
   const [showPassword, setShowPassword] = useState(false);
   const handleRegisterForm = (event) => {
@@ -28,10 +28,17 @@ const Register = () => {
     } else if (checked == false) {
       return setRegisterError("Please agree with our terms and condition");
     }
+
     register(email, password)
       .then((result) => {
-        console.log(result.user);
-        Swal.fire("Well Come!", "You Registration is successfull !", "success");
+        updataUser(name, imgURL).then(() => {
+          console.log(result.user);
+          Swal.fire(
+            "Well Come!",
+            "You Registration is successfull !",
+            "success"
+          );
+        });
       })
       .catch((error) => {
         console.log(error.message);
@@ -46,7 +53,7 @@ const Register = () => {
       <div className="min-h-screen ">
         <div className="hero-content flex-col ">
           <div className="text-center ">
-            <h1 className="text-5xl font-bold text-gray-200">Register now!</h1>
+            <h1 className="text-5xl font-bold text-gray-200">Register now !</h1>
           </div>
           <div className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-[#000000b9]">
             <div className="text-center m-3">

@@ -5,7 +5,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 const Navber = () => {
   const { user, logOut } = useContext(AuthContext);
-  const handleLogout = () => {
+  const handleLogOut = () => {
     logOut()
       .then()
       .catch((error) => {
@@ -31,7 +31,7 @@ const Navber = () => {
 
       <li className="hover:underline  hover:decoration-[#e8be6a] decoration-4 underline-offset-1">
         <NavLink
-          to="/service"
+          to="/allfood"
           className={({ isActive, isPending }) =>
             isActive
               ? "underline decoration-[#e8be6a] decoration-4 underline-offset-1 text-[#e8be6a]  "
@@ -102,15 +102,47 @@ const Navber = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <h1>{user?.email}</h1>
-          <Link to="/Login">
-            <button
-              onClick={handleLogout}
-              className="border-2 border-gray-100  px-6 py-1 text-gray-100 font-opensens text-xl font-semibold hover:bg-[#e8be6a] hover:text-white hover:border-none rounded-md "
-            >
-              {user ? "Log out" : "Signin"}
-            </button>
-          </Link>
+          <div>
+            {user ? (
+              <div className="dropdown dropdown-end">
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                  <div className="w-10 rounded-full">
+                    <img src={user?.photoURL} />
+                  </div>
+                </label>
+                <ul
+                  tabIndex={0}
+                  className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                >
+                  <li>
+                    <a className="justify-between">
+                      Profile
+                      <span className="badge">New</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>Settings</a>
+                  </li>
+                  <li onClick={handleLogOut}>
+                    <a>Logout</a>
+                  </li>
+                </ul>
+              </div>
+            ) : (
+              <div>
+                <Link to="/Login">
+                  <button className=" bg-[#e8be6a3b]  px-6 py-1 text-gray-100 font-opensens text-xl font-semibold hover:border-2 border-[#FDCE6F] hover:text-gray-100  rounded-md ">
+                    Log in
+                  </button>
+                </Link>
+                <Link to="/Register">
+                  <button className=" bg-[#e8be6a3b]  px-6 py-1 text-gray-100 font-opensens ml-2 text-xl font-semibold hover:border-2 border-[#FDCE6F] hover:text-gray-100  rounded-md ">
+                    Registration
+                  </button>
+                </Link>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>
