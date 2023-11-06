@@ -18,3 +18,10 @@
   background-repeat: repeat;
   background-size: cover;
 }
+.footerContainer {
+  background-image: linear-gradient(#151515, #00000033),
+    url("../assets/images/footer.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
