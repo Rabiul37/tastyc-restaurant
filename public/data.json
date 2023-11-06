@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Grilled Steak",
+    "image": "https://i.ibb.co/jW96q4W/Grilled-Steak.jpg",
+    "category": "Main Course",
+    "price": 25.99,
+    "quantity": 200,
+    "origin": "United States",
+    "made_by": "Chef John",
+    "description": "Our perfectly grilled steak is a carnivore's delight, cooked to perfection and bursting with smoky flavors."
+  },
+  {
+    "name": "Garlic Butter Shrimp Pasta",
+    "image": "https://i.ibb.co/5B66B8t/Garlic-Butter-Shrimp-Pasta.jpg",
+    "category": "Main Course",
+    "price": 19.99,
+    "quantity": 300,
+    "origin": "Italy",
+    "made_by": "Chef Maria",
+    "description": "Indulge in a creamy garlic butter shrimp pasta that's a symphony of flavors, combining succulent shrimp with rich, comforting sauce."
+  },
+  {
+    "name": "Margherita Pizza",
+    "image": "https://i.ibb.co/V2f1n52/Margherita-Pizza.jpg",
+    "category": "Pizza",
+    "price": 14.99,
+    "quantity": 150,
+    "origin": "Italy",
+    "made_by": "Chef Antonio",
+    "description": "Experience the essence of Italy with our Margherita pizza, where simplicity meets taste with sun-ripened tomatoes, fresh basil, and melted mozzarella."
+  },
+  {
+    "name": "Spicy Thai Curry",
+    "image": "https://i.ibb.co/jzZf89h/Spicy-Thai-Curry.jpg",
+    "category": "Main Course",
+    "price": 16.99,
+    "quantity": 400,
+    "origin": "Thailand",
+    "made_by": "Chef Nong",
+    "description": "Our Spicy Thai Curry is a flavorful journey to Southeast Asia, with vibrant spices and coconut milk, creating a balanced heat and flavor."
+  },
+  {
+    "name": "Chocolate Lava Cake",
+    "image": "https://i.ibb.co/pPqPKh6/Chocolate-Lava-Cake.jpg",
+    "category": "Dessert",
+    "price": 8.99,
+    "quantity": 190,
+    "origin": "France",
+    "made_by": "Pastry Chef Sophie",
+    "description": "Indulge in a decadent Chocolate Lava Cake, revealing a molten center of pure, rich chocolate."
+  },
+  {
+    "name": "Caprese Salad",
+    "image": "https://i.ibb.co/5jGL3xL/Caprese-Salad.jpg",
+    "category": "Salad",
+    "price": 10.99,
+    "quantity": 120,
+    "origin": "Italy",
+    "made_by": "Chef Luigi",
+    "description": "Our Caprese salad is a celebration of simplicity, with vine-ripened tomatoes, creamy mozzarella, and a drizzle of olive oil and balsamic reduction."
+  },
+  {
+    "name": "Crispy Fried Chicken",
+    "image": "https://i.ibb.co/5rmpvts/Crispy-Fried-Chicken.jpg",
+    "category": "Main Course",
+    "price": 12.99,
+    "quantity": 140,
+    "origin": "United States",
+    "made_by": "Chef Sarah",
+    "description": "Get ready for a flavor explosion with our Crispy Fried Chicken, featuring crispy, golden-brown skin and juicy, seasoned meat."
+  },
+  {
+    "name": "Mouthwatering BBQ Ribs",
+    "image": "https://i.ibb.co/YBCdJP1/Mouthwatering-BBQ-Ribs.jpg",
+    "category": "Main Course",
+    "price": 22.99,
+    "quantity": 15,
+    "origin": "United States",
+    "made_by": "Chef Mike",
+    "description": "Our BBQ ribs are fall-off-the-bone tender, slow-cooked to perfection, and generously coated in our signature BBQ sauce."
+  },
+  {
+    "name": "Mango Salsa Fish Tacos",
+    "image": "https://i.ibb.co/3rKgWY8/Mango-Salsa-Fish-Tacos.jpg",
+    "category": "Main Course",
+    "price": 15.99,
+    "quantity": 3,
+    "origin": "Mexico",
+    "made_by": "Chef Carlos",
+    "description": "Enjoy tropical flavors with our Mango Salsa Fish Tacos, featuring crispy fish and a zesty mango salsa."
+  },
+  {
+    "name": "Vegetable Stir-Fry",
+    "image": "https://i.ibb.co/HhQQgrM/Vegetable-Stir-Fry.jpg",
+    "category": "Vegetarian",
+    "price": 13.99,
+    "quantity": 350,
+    "origin": "Various",
+    "made_by": "Chef Emily",
+    "description": "For a healthier option, try our Vegetable Stir-Fry, with crisp and colorful veggies in a savory stir-fry sauce."
+  }
+]

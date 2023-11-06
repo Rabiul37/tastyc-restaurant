@@ -9,13 +9,13 @@ import burger6 from "../assets/images/burger6.jpg";
 const Footer = () => {
   return (
     <div>
-      <div className="flex w-full">
-        <img src={burger1} className="w-60" alt="" />
-        <img src={burger2} className="w-60" alt="" />
-        <img src={burger3} className="w-60" alt="" />
-        <img src={burger4} className="w-60" alt="" />
-        <img src={burger5} className="w-60" alt="" />
-        <img src={burger6} className="w-60" alt="" />
+      <div className="w-full  lg:block lg:flex">
+        <img src={burger2} className="hidden lg:w-60" alt="" />
+        <img src={burger1} className="hidden lg:w-60" alt="" />
+        <img src={burger3} className="hidden lg:w-60" alt="" />
+        <img src={burger4} className="hidden lg:w-60" alt="" />
+        <img src={burger5} className="hidden lg:w-60" alt="" />
+        <img src={burger6} className="hidden lg:w-60" alt="" />
       </div>
       <div className="footerContainer">
         <footer className="footer p-20  text-gray-100">

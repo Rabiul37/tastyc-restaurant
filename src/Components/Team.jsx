@@ -3,8 +3,8 @@ import design2 from "../assets/images/design2.png";
 const Team = () => {
   return (
     <>
-      <div className="flex gap-10 justify-between mt-20 mb-20 bg-gray-100 p-10">
-        <div className="mt-10">
+      <div className=" lg:flex gap-10 justify-between mt-20 mb-20 bg-gray-100 p-10">
+        <div className="mt-10 mb-10">
           <img src={design2} alt="" className="" />
           <span className="text-xl font-semibold font-opensens">Team</span>
           <h1 className="text-6xl font-semibold font-philosopher text-[#FF3811] mb-5">

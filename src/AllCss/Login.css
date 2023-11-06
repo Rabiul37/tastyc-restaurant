@@ -25,3 +25,8 @@
   background-repeat: repeat;
   background-size: cover;
 }
+
+.radius {
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}

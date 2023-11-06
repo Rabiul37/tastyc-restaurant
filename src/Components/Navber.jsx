@@ -131,12 +131,12 @@ const Navber = () => {
             ) : (
               <div>
                 <Link to="/Login">
-                  <button className=" bg-[#e8be6a3b]  px-6 py-1 text-gray-100 font-opensens text-xl font-semibold hover:border-2 border-[#FDCE6F] hover:text-gray-100  rounded-md ">
+                  <button className=" bg-[#e8be6a3b] mb-5 w-44 px-6 py-1 text-gray-100 font-opensens text-xl font-semibold hover:border-2 border-[#FDCE6F] hover:text-gray-100  rounded-md ">
                     Log in
                   </button>
                 </Link>
                 <Link to="/Register">
-                  <button className=" bg-[#e8be6a3b]  px-6 py-1 text-gray-100 font-opensens ml-2 text-xl font-semibold hover:border-2 border-[#FDCE6F] hover:text-gray-100  rounded-md ">
+                  <button className=" bg-[#e8be6a3b] w-44 px-6 py-1 text-gray-100 font-opensens ml-2 text-xl font-semibold hover:border-2 border-[#FDCE6F] hover:text-gray-100  rounded-md ">
                     Registration
                   </button>
                 </Link>
