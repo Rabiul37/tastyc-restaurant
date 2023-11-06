@@ -12,3 +12,9 @@
   background-repeat: repeat;
   background-size: cover;
 }
+.appContainer {
+  background-image: url("../assets/images/background.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}

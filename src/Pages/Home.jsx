@@ -1,3 +1,4 @@
+import Application from "../Components/Application";
 import Banner from "../Components/Banner";
 import Team from "../Components/Team";
 
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <Banner></Banner>
       <Team></Team>
+      <Application></Application>
     </div>
   );
 };
