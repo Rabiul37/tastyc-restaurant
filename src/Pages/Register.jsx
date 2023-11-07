@@ -5,6 +5,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import "../AllCss/Login.css";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/Ai";
+import axios from "axios";
 const Register = () => {
   const { register, updataUser } = useContext(AuthContext);
   const [registerError, setRegisterError] = useState(" ");
@@ -18,7 +19,12 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
     const checked = form.checkbox.checked;
-    console.log(name, imgURL, email, password);
+    console.log(name, password, imgURL, email);
+    const user = { name, password, imgURL, email };
+    axios.post("http://localhost:5000/user", user).then((res) => {
+      console.log(res.data);
+    });
+
     if (password.length < 6) {
       return setRegisterError("Your password must be at least six charecter");
     } else if (!/[A-Z]/.test(password)) {

@@ -12,7 +12,7 @@ const TopFood = () => {
   }, []);
   return (
     <>
-      <div className="mt-16 w-11/12 m-auto  font-philosopher appContainer radius3 p-10 ">
+      <div className="mt-16 w-11/12 m-auto  font-philosopher regcontainer radius3 p-10 ">
         <div className="mb-8 text-center text-gray-100">
           <h2 className="text-3xl font-semibold">Chefs Specials</h2>
           <div className="flex justify-center items-center mb-2 mt-2">
