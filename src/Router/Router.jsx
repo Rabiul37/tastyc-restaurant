@@ -7,6 +7,7 @@ import Register from "../Pages/Register";
 import Allfood from "../Pages/Allfood";
 import Blog from "../Pages/Blog";
 import FoodItemsDetails from "../Pages/FoodItemsDetails";
+import Order from "../Pages/Order";
 
 const router = createBrowserRouter([
   {
@@ -26,8 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/foodItemDetails/:id",
         element: <FoodItemsDetails></FoodItemsDetails>,
-        loader: ({ params }) =>
-          fetch(`http://localhost:5000/restaurantItem/${params.id}`),
+      },
+      {
+        path: "/order/:id",
+        element: <Order></Order>,
       },
       {
         path: "/Blog",

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Navber from "../Components/Navber";
 import { useEffect, useState } from "react";
 import design1 from "../assets/images/design1.png";
@@ -12,6 +12,7 @@ const FoodItemsDetails = () => {
       .then((data) => setFoodDetails(data));
   }, []);
   const {
+    _id,
     name,
     image,
     category,
@@ -22,7 +23,7 @@ const FoodItemsDetails = () => {
     description,
   } = foodDetail || {};
   return (
-    <div className="appContainer p-8 pb-60 ">
+    <div className="appContainer p-3 pb-16 ">
       <Navber></Navber>
       <div className="">
         <div className="card w-10/12 m-auto border-4 border-gray-200 mt-28 lg:card-side bg-gray-300  shadow-xl">
@@ -45,14 +46,16 @@ const FoodItemsDetails = () => {
               </h1>
               <h1 className=" w-40 bg-[#d4300f] py-3 radius2 text-center text-xl font-semibold text-gray-200 ">
                 {" "}
-                Price : {price}
+                Price : {price} $
               </h1>
             </div>
             <p className="font-md">{description}</p>
             <div className="flex gap-8">
-              <button className="w-64 rounded-xl py-2 text-xl font-semibold tracking-wider border-2 border-[#d4300f] hover:bg-[#d4300f] hover:text-gray-200 duration-300 ">
-                Order
-              </button>
+              <Link to={`/order/${_id}`}>
+                <button className="w-64 rounded-xl py-2 text-xl font-semibold tracking-wider border-2 border-[#d4300f] hover:bg-[#d4300f] hover:text-gray-200 duration-300 ">
+                  Order
+                </button>
+              </Link>
               <img src={design1} alt="" />
             </div>
           </div>
