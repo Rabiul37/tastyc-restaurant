@@ -8,6 +8,7 @@ import Allfood from "../Pages/Allfood";
 import Blog from "../Pages/Blog";
 import FoodItemsDetails from "../Pages/FoodItemsDetails";
 import Order from "../Pages/Order";
+import DetailsPrivate from "../private/DetailsPrivate";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/order/:id",
-        element: <Order></Order>,
+        element: (
+          <DetailsPrivate>
+            <Order></Order>
+          </DetailsPrivate>
+        ),
       },
       {
         path: "/Blog",
