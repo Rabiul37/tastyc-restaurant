@@ -9,7 +9,9 @@ import Blog from "../Pages/Blog";
 import FoodItemsDetails from "../Pages/FoodItemsDetails";
 import Order from "../Pages/Order";
 import DetailsPrivate from "../private/DetailsPrivate";
-
+import MyAddedFoodItem from "../Pages/MyAddedFoodItem";
+import AddFoodItem from "../Pages/AddFoodItem";
+import MyOrderedFoodItem from "../Pages/MyOrderedFoodItem";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -48,6 +50,18 @@ const router = createBrowserRouter([
       {
         path: "/Login",
         element: <Login></Login>,
+      },
+      {
+        path: "/myAddedItem",
+        element: <MyAddedFoodItem></MyAddedFoodItem>,
+      },
+      {
+        path: "/AddItem",
+        element: <AddFoodItem></AddFoodItem>,
+      },
+      {
+        path: "/myOrderedItem",
+        element: <MyOrderedFoodItem></MyOrderedFoodItem>,
       },
     ],
   },

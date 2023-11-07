@@ -112,19 +112,25 @@ const Navber = () => {
                 </label>
                 <ul
                   tabIndex={0}
-                  className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                  className="mt-3 z-[1] p-2 shadow text-xl border-b-2  dropdown-content bg-black border-2 text-gray-100 rounded-box w-60"
                 >
                   <li>
-                    <a className="justify-between">
-                      Profile
-                      <span className="badge">New</span>
-                    </a>
+                    <Link to="/myAddedItem">
+                      <a className="hover:border-b-2">My added food item</a>
+                    </Link>
                   </li>
                   <li>
-                    <a>Settings</a>
+                    <Link to="/AddItem">
+                      <a className="hover:border-b-2">add a food item</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/myOrderedItem">
+                      <a className="hover:border-b-2">My ordered food item</a>
+                    </Link>
                   </li>
                   <li onClick={handleLogOut}>
-                    <a>Logout</a>
+                    <a className="hover:border-b-2">Logout</a>
                   </li>
                 </ul>
               </div>
