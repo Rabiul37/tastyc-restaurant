@@ -34,3 +34,7 @@
   border-top-right-radius: 25px;
   border-bottom-left-radius: 25px;
 }
+.radius3 {
+  border-top-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+}
