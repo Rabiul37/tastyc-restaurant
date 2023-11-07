@@ -2,8 +2,11 @@ import { useContext, useEffect, useState } from "react";
 import Navber from "../Components/Navber";
 import { AuthContext } from "../Provider/AuthProvider";
 import MyOrderedCard from "../Components/MyOrderedCard";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 const MyOrderedFoodItem = () => {
+  //all ordered data collection operation code .
   const { user } = useContext(AuthContext);
   const [orders, setOrders] = useState([]);
   console.log(orders);
@@ -13,10 +16,37 @@ const MyOrderedFoodItem = () => {
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [url]);
+
+  //single order delete operation code .
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      console.log(result);
+      axios.delete(`http://localhost:5000/order/${id}`).then((res) => {
+        console.log(res.data);
+        if (res.data.deletedCount > 0) {
+          Swal.fire({
+            title: "Deleted!",
+            text: "Your file has been deleted.",
+            icon: "success",
+          });
+          const remaining = orders.filter((order) => order._id !== id);
+          setOrders(remaining);
+        }
+      });
+    });
+  };
   return (
     <div className="logcontainer">
       <Navber></Navber>
-      <div className="p-40">
+      <div className="p-40 pt-10">
         <div className="overflow-x-auto  text-gray-100">
           <table className="table">
             {/* head */}
@@ -34,7 +64,11 @@ const MyOrderedFoodItem = () => {
             </thead>
             <tbody>
               {orders.map((order) => (
-                <MyOrderedCard key={order._id} order={order}></MyOrderedCard>
+                <MyOrderedCard
+                  key={order._id}
+                  order={order}
+                  handleDelete={handleDelete}
+                ></MyOrderedCard>
               ))}
             </tbody>
           </table>
