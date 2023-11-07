@@ -4,6 +4,7 @@ import Navber from "../Components/Navber";
 import { AuthContext } from "../Provider/AuthProvider";
 import axios from "axios";
 import Swal from "sweetalert2";
+import PageTitle from "../Components/PageTitle";
 const Order = () => {
   const { user } = useContext(AuthContext);
   const [foodDetails, setFoodDetails] = useState([]);
@@ -39,6 +40,7 @@ const Order = () => {
   return (
     <>
       <div className="regcontainer">
+        <PageTitle title="Tastyc-Order"></PageTitle>
         <Navber></Navber>
         <div className="hero min-h-screen">
           <div className="hero-content flex-col ">

@@ -3,6 +3,7 @@ import Navber from "../Components/Navber";
 import { AuthContext } from "../Provider/AuthProvider";
 import MyFoodCard from "../Components/MyFoodCard";
 import design2 from "../assets/images/design2.png";
+import PageTitle from "../Components/PageTitle";
 
 const MyAddedFoodItem = () => {
   const { user } = useContext(AuthContext);
@@ -15,6 +16,7 @@ const MyAddedFoodItem = () => {
   }, [url]);
   return (
     <div className="appContainer">
+      <PageTitle title="Tastyc- My Added Food items"></PageTitle>
       <Navber></Navber>
       <div className="mt-10 mb-16">
         <h1 className="text-2xl text-center font-semibold lg:text-6xl tracking-wider  text-[#E5EBEF] font-philosopher ml-8">

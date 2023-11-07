@@ -4,6 +4,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import "../AllCss/Login.css";
 import axios from "axios";
 import Swal from "sweetalert2";
+import PageTitle from "../Components/PageTitle";
 const AddFoodItem = () => {
   const { user } = useContext(AuthContext);
   const handleAdditem = (e) => {
@@ -42,6 +43,7 @@ const AddFoodItem = () => {
   };
   return (
     <div className="logcontainer">
+      <PageTitle title="Tastyc-Add Food items"></PageTitle>
       <Navber></Navber>
       <div>
         <div className="font-philosopher">

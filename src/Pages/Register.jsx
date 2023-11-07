@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import "../AllCss/Login.css";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/Ai";
 import axios from "axios";
+import PageTitle from "../Components/PageTitle";
 const Register = () => {
   const { register, updataUser } = useContext(AuthContext);
   const [registerError, setRegisterError] = useState(" ");
@@ -55,6 +56,7 @@ const Register = () => {
   };
   return (
     <div className="regcontainer font-philosopher">
+      <PageTitle title="Tastyc-Register"></PageTitle>
       <Navber></Navber>
       <div className="min-h-screen ">
         <div className="hero-content flex-col ">

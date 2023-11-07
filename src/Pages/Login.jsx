@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/Ai";
 import { FcGoogle } from "react-icons/Fc";
 import "../AllCss/Login.css";
+import PageTitle from "../Components/PageTitle";
 const Login = () => {
   const { googleLogin, login } = useContext(AuthContext);
   const [loginError, setLoginError] = useState("");
@@ -44,6 +45,7 @@ const Login = () => {
   };
   return (
     <div className="logcontainer font-philosopher">
+      <PageTitle title="Tastyc-Login"></PageTitle>
       <Navber></Navber>
       <div className="min-h-screen">
         <div className="hero-content flex-col ">

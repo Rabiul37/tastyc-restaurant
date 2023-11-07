@@ -4,6 +4,7 @@ import design2 from "../assets/images/design2.png";
 import "../AllCss/Login.css";
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import PageTitle from "../Components/PageTitle";
 const Allfood = () => {
   const [restaurantItems, setrestaurantItem] = useState([]);
   const [itemsperPage, setItemsperPage] = useState(6);
@@ -37,6 +38,7 @@ const Allfood = () => {
   }, [currentPage, itemsperPage]);
   return (
     <div className="appContainer">
+      <PageTitle title="Tastyc-All Food Items"></PageTitle>
       <Navber></Navber>
       <div className="mt-10 mb-16">
         <h1 className="text-2xl text-center font-semibold lg:text-6xl tracking-wider  text-[#E5EBEF] font-philosopher ml-8">

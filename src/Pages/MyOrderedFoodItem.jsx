@@ -4,6 +4,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import MyOrderedCard from "../Components/MyOrderedCard";
 import axios from "axios";
 import Swal from "sweetalert2";
+import PageTitle from "../Components/PageTitle";
 
 const MyOrderedFoodItem = () => {
   //all ordered data collection operation code .
@@ -45,12 +46,13 @@ const MyOrderedFoodItem = () => {
   };
   return (
     <div className="logcontainer">
+      <PageTitle title="Tastyc-My order"></PageTitle>
       <Navber></Navber>
-      <div className="p-40 pt-10">
+      <div className="p-40 pt-10 pb-[370px]">
         <div className="overflow-x-auto  text-gray-100">
           <table className="table">
             {/* head */}
-            <thead className="text-gray-100 font-philosopher text-xl bg-[#ff3811] ">
+            <thead className="text-gray-100 font-philosopher text-xl bg-[#e24d2f] ">
               <tr>
                 <th></th>
                 <th>Food Name </th>

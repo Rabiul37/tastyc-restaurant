@@ -7,10 +7,10 @@ const MyOrderedCard = ({ order, handleDelete }) => {
   return (
     <>
       {/* row 1 */}
-      <tr className="text-md font-philosopher font-semibold text-[18px] bg-[#000000e8] text-gray-300">
+      <tr className="text-md font-philosopher font-semibold text-[18px] bg-gray-200 text-gray-600">
         <th
           onClick={() => handleDelete(_id)}
-          className="pl-2 cursor-pointer w-2 text-gray-200 hover:bg-gray-200 p-1 hover:text-red-500 hover:rounded-full"
+          className="pl-2 cursor-pointer w-2 text-gray-600 hover:bg-gray-200 p-1 hover:text-red-500 hover:rounded-full"
         >
           X
         </th>
