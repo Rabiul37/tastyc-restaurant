@@ -37,3 +37,14 @@
 .radius3 {
   border-radius: 60px;
 }
+.pagination button {
+  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  border: 2px solid white;
+  margin: 10px;
+}
+.currentPage {
+  background: #ff3811;
+}
