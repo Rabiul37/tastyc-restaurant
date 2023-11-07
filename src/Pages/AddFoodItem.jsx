@@ -173,7 +173,7 @@ const AddFoodItem = () => {
 
                   <div className="form-control mt-6">
                     <button className="rounded-xl text-white py-2 text-xl font-semibold tracking-wider border-2 border-gray-100 hover:bg-[#d4300f] hover:text-gray-200 duration-300 ">
-                      add
+                      Add Item
                     </button>
                   </div>
                 </form>

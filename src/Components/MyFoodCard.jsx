@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
-import "../AllCss/Login.css";
 import { Link } from "react-router-dom";
-const AllFoodCard = ({ foodItem }) => {
-  const { _id, name, image, category, price, quantity } = foodItem || {};
+const MyFoodCard = ({ food }) => {
+  const { _id, name, image, category, price, quantity } = food;
   return (
     <div>
       <div className="card w-80 h-[450px] bg-gray-200  font-philosopher hover:shadow-white shadow-xl ">
@@ -34,7 +33,7 @@ const AllFoodCard = ({ foodItem }) => {
   );
 };
 
-export default AllFoodCard;
-AllFoodCard.propTypes = {
-  foodItem: PropTypes.object,
+export default MyFoodCard;
+MyFoodCard.propTypes = {
+  food: PropTypes.object,
 };
