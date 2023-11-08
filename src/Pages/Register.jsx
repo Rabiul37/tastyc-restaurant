@@ -22,9 +22,11 @@ const Register = () => {
     const checked = form.checkbox.checked;
     console.log(name, password, imgURL, email);
     const user = { name, password, imgURL, email };
-    axios.post("http://localhost:5000/user", user).then((res) => {
-      console.log(res.data);
-    });
+    axios
+      .post("https://tastyc-restaurant-server.vercel.app/user", user)
+      .then((res) => {
+        console.log(res.data);
+      });
 
     if (password.length < 6) {
       return setRegisterError("Your password must be at least six charecter");

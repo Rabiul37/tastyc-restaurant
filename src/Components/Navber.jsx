@@ -2,7 +2,8 @@ import { Link, NavLink } from "react-router-dom";
 import design2 from "../assets/images/design2.png";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
-
+import { SiGnuprivacyguard } from "react-icons/Si";
+import { BiSolidLogInCircle } from "react-icons/Bi";
 const Navber = () => {
   const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () => {
@@ -114,6 +115,24 @@ const Navber = () => {
                   tabIndex={0}
                   className="mt-3 z-[1] p-2 shadow text-xl border-b-2  dropdown-content bg-black border-2 text-gray-100 rounded-box w-60"
                 >
+                  <div className="flex items-center gap-2">
+                    <label
+                      tabIndex={0}
+                      className="btn btn-ghost btn-circle avatar"
+                    >
+                      <div className="w-20 rounded-full">
+                        <img src={user?.photoURL} />
+                      </div>
+                    </label>
+                    <div>
+                      <h1 className=" text-lg font-semibold text-gray-200">
+                        {user?.displayName}
+                      </h1>
+                      <h1 className=" text-sm font-semibold text-gray-200">
+                        {user?.email}
+                      </h1>
+                    </div>
+                  </div>
                   <li>
                     <Link to="/myAddedItem">
                       <a className="hover:border-b-2">My added food item</a>
@@ -135,15 +154,23 @@ const Navber = () => {
                 </ul>
               </div>
             ) : (
-              <div>
+              <div className="flex items-center gap-1">
                 <Link to="/Login">
-                  <button className=" bg-[#e8be6a3b] mb-5 w-44 px-6 py-1 text-gray-100 font-opensens text-xl font-semibold hover:border-2 border-[#FDCE6F] hover:text-gray-100  rounded-md ">
-                    Log in
+                  <button className=" bg-[#e8be6a3b] mt-5 text-center flex items-center gap-1  mb-5 w-32 px-6 py-1 text-gray-100 font-opensens text-xl font-semibold hover:border-2 border-[#FDCE6F] hover:text-gray-100  rounded-md ">
+                    <span>
+                      {" "}
+                      <BiSolidLogInCircle></BiSolidLogInCircle>
+                    </span>{" "}
+                    <span>Login</span>
                   </button>
                 </Link>
                 <Link to="/Register">
-                  <button className=" bg-[#e8be6a3b] w-44 px-6 py-1 text-gray-100 font-opensens ml-2 text-xl font-semibold hover:border-2 border-[#FDCE6F] hover:text-gray-100  rounded-md ">
-                    Registration
+                  <button className=" bg-[#e8be6a3b] flex items-center gap-1 w-44 px-6 py-1 text-gray-100 font-opensens ml-2 text-xl font-semibold hover:border-2 border-[#FDCE6F] hover:text-gray-100  rounded-md ">
+                    <span>
+                      {" "}
+                      <SiGnuprivacyguard></SiGnuprivacyguard>
+                    </span>{" "}
+                    <span>Registration</span>
                   </button>
                 </Link>
               </div>

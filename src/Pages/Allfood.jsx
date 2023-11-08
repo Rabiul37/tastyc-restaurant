@@ -5,6 +5,8 @@ import "../AllCss/Login.css";
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import PageTitle from "../Components/PageTitle";
+import Search from "../Components/Search";
+
 const Allfood = () => {
   const [restaurantItems, setrestaurantItem] = useState([]);
   const [itemsperPage, setItemsperPage] = useState(6);
@@ -31,7 +33,7 @@ const Allfood = () => {
   };
   useEffect(() => {
     fetch(
-      `http://localhost:5000/restaurantItem?page=${currentPage}&size=${itemsperPage}`
+      `https://tastyc-restaurant-server.vercel.app/restaurantItem?page=${currentPage}&size=${itemsperPage}`
     )
       .then((res) => res.json())
       .then((data) => setrestaurantItem(data));
@@ -54,6 +56,7 @@ const Allfood = () => {
         <div className="flex justify-center items-center mt-5">
           <img src={design2} alt="" />
         </div>
+        <Search></Search>
       </div>
       <div className="grid lg:grid-cols-3 gap-5 w-11/12 m-auto">
         {restaurantItems.map((foodItem) => (

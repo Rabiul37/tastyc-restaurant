@@ -31,15 +31,17 @@ const AddFoodItem = () => {
       email,
     };
     console.log(addItem);
-    axios.post("http://localhost:5000/userItem", addItem).then((res) => {
-      if (res.data.insertedId) {
-        Swal.fire(
-          "Your Food item is added",
-          "Thanks for stay with us !",
-          "success"
-        );
-      }
-    });
+    axios
+      .post("https://tastyc-restaurant-server.vercel.app/userItem", addItem)
+      .then((res) => {
+        if (res.data.insertedId) {
+          Swal.fire(
+            "Your Food item is added",
+            "Thanks for stay with us !",
+            "success"
+          );
+        }
+      });
   };
   return (
     <div className="logcontainer">

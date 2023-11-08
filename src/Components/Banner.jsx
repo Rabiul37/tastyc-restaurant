@@ -18,12 +18,15 @@ const Banner = () => {
               <Navber></Navber>
             </div>
             <div className="absolute top-40 left-20   lg:top-20 lg:left-[180px]">
-              <div className="flex flex-col items-center justify-center ml-12 lg:mb-10">
+              <div className="flex flex-col items-center justify-center ml-12 lg:mb-5">
                 <div className="h-2 w-20 outline-none bg-[#fac967] text-center mb-3">
                   {" "}
                 </div>
-                <h1 className="font-2xl font-semibold tracking-wider text-[#E5EBEF] font-philosopher">
+                <h1 className="font-semibold tracking-wider text-[#E5EBEF] font-philosopher">
                   Hellow, friend
+                </h1>
+                <h1 className="text-2xl font-semibold tracking-wider text-[#E5EBEF] font-philosopher">
+                  Welcome to
                 </h1>
               </div>
               <h1 className=" text-7xl font-semibold lg:text-9xl text-center tracking-wider  text-[#fdce6f] font-philosopher ml-8">
@@ -34,7 +37,7 @@ const Banner = () => {
                 Where Every Bite Tells a Story
               </h1>
               <div className="flex items-center justify-center mt-5">
-                <Link to="/">
+                <Link to="/allfood">
                   <button className=" w-40 border-2 border-gray-100  px-6 py-1 text-gray-100 font-opensens text-xl font-semibold hover:bg-[#030303d0] hover:text-white hover:border-gray-100 rounded-md ">
                     Menu
                   </button>

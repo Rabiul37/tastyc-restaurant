@@ -25,7 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/allfood",
         element: <Allfood></Allfood>,
-        loader: () => fetch("http://localhost:5000/restaurantItemCount"),
+        loader: () =>
+          fetch(
+            "https://tastyc-restaurant-server.vercel.app/restaurantItemCount"
+          ),
       },
       {
         path: "/foodItemDetails/:id",

@@ -5,14 +5,16 @@ import { AuthContext } from "../Provider/AuthProvider";
 import axios from "axios";
 import Swal from "sweetalert2";
 import PageTitle from "../Components/PageTitle";
+import moment from "moment";
 const Order = () => {
   const { user } = useContext(AuthContext);
   const [foodDetails, setFoodDetails] = useState([]);
-
+  const currentDate = moment().format("Do MMMM YYYY");
+  console.log(currentDate);
   const { id } = useParams();
   const foodDetail = foodDetails.find((foodItem) => foodItem._id == id);
   useEffect(() => {
-    fetch("http://localhost:5000/restaurantItem")
+    fetch("https://tastyc-restaurant-server.vercel.app/restaurantItem")
       .then((res) => res.json())
       .then((data) => setFoodDetails(data));
   }, []);
@@ -27,15 +29,17 @@ const Order = () => {
     const buyerEmail = form.buyerEmail.value;
     const date = form.date.value;
     const order = { name, price, quantity, buyerName, buyerEmail, date };
-    axios.post("http://localhost:5000/order", order).then((res) => {
-      if (res.data.insertedId) {
-        Swal.fire(
-          "Your order is confirmed",
-          "You will get your food soon !",
-          "success"
-        );
-      }
-    });
+    axios
+      .post("https://tastyc-restaurant-server.vercel.app/order", order)
+      .then((res) => {
+        if (res.data.insertedId) {
+          Swal.fire(
+            "Your order is confirmed",
+            "You will get your food soon !",
+            "success"
+          );
+        }
+      });
   };
   return (
     <>
@@ -128,11 +132,13 @@ const Order = () => {
                       <span className="text-gray-100">Date</span>
                     </label>
                     <input
-                      type="datetime-local"
+                      type="text"
                       name="date"
-                      placeholder="date"
-                      className="input input-bordered w-[210px]"
+                      defaultValue={currentDate}
+                      placeholder={currentDate}
+                      className="input input-bordered text-gray-500 w-[210px]"
                       required
+                      readOnly
                     />
                   </div>
                 </div>

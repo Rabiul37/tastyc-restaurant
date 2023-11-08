@@ -11,7 +11,7 @@ const MyOrderedFoodItem = () => {
   const { user } = useContext(AuthContext);
   const [orders, setOrders] = useState([]);
   console.log(orders);
-  const url = `http://localhost:5000/order?email=${user?.email}`;
+  const url = `https://tastyc-restaurant-server.vercel.app/order?buyerEmail=${user?.email}`;
   useEffect(() => {
     fetch(url, { withcredentials: true })
       .then((res) => res.json())
@@ -30,18 +30,20 @@ const MyOrderedFoodItem = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       console.log(result);
-      axios.delete(`http://localhost:5000/order/${id}`).then((res) => {
-        console.log(res.data);
-        if (res.data.deletedCount > 0) {
-          Swal.fire({
-            title: "Deleted!",
-            text: "Your file has been deleted.",
-            icon: "success",
-          });
-          const remaining = orders.filter((order) => order._id !== id);
-          setOrders(remaining);
-        }
-      });
+      axios
+        .delete(`https://tastyc-restaurant-server.vercel.app/order/${id}`)
+        .then((res) => {
+          console.log(res.data);
+          if (res.data.deletedCount > 0) {
+            Swal.fire({
+              title: "Deleted!",
+              text: "Your file has been deleted.",
+              icon: "success",
+            });
+            const remaining = orders.filter((order) => order._id !== id);
+            setOrders(remaining);
+          }
+        });
     });
   };
   return (

@@ -7,7 +7,7 @@ const FoodItemsDetails = () => {
   const { id } = useParams();
   const foodDetail = foodDetails.find((foodItem) => foodItem._id == id);
   useEffect(() => {
-    fetch("http://localhost:5000/restaurantItem")
+    fetch("https://tastyc-restaurant-server.vercel.app/restaurantItem")
       .then((res) => res.json())
       .then((data) => setFoodDetails(data));
   }, []);

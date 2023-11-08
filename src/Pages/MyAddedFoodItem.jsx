@@ -8,7 +8,7 @@ import PageTitle from "../Components/PageTitle";
 const MyAddedFoodItem = () => {
   const { user } = useContext(AuthContext);
   const [foods, setFoods] = useState([]);
-  const url = `http://localhost:5000/userItem?email=${user?.email}`;
+  const url = `https://tastyc-restaurant-server.vercel.app/userItem?email=${user?.email}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
